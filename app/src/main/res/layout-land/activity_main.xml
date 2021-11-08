@@ -10,33 +10,32 @@
         android:id="@+id/heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="29dp"
         android:text="@string/app_name"
         android:textColor="?attr/colorPrimaryVariant"
         android:textSize="48sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnTutorial"
+        app:layout_constraintStart_toStartOf="@+id/btnTutorial"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnRepo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="30dp"
+        android:drawableEnd="@drawable/ic_icons8_github"
         android:text="@string/github"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnQuiz"
-        app:layout_constraintStart_toStartOf="@+id/btnQuiz"
-        android:drawableEnd="@drawable/ic_icons8_github"/>
+        app:layout_constraintBottom_toTopOf="@+id/madeBy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/madeBy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="21dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="23dp"
         android:gravity="bottom|right"
         android:text="@string/madeBy"
         android:textColor="?attr/colorPrimary"
@@ -48,21 +47,21 @@
         android:id="@+id/btnQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="22dp"
+        android:layout_marginBottom="18dp"
+        android:drawableEnd="@drawable/ic_outline_school_24"
         android:text="@string/quiz"
         app:layout_constraintBottom_toTopOf="@+id/btnRepo"
-        app:layout_constraintEnd_toEndOf="@+id/btnTutorial"
-        app:layout_constraintStart_toStartOf="@+id/btnTutorial"
-        android:drawableEnd="@drawable/ic_outline_school_24"/>
+        app:layout_constraintEnd_toEndOf="@+id/btnRepo"
+        app:layout_constraintStart_toStartOf="@+id/btnRepo" />
 
     <Button
         android:id="@+id/btnTutorial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="22dp"
+        android:layout_marginBottom="17dp"
         android:drawableEnd="@drawable/ic_outline_menu_book_24"
         android:text="@string/tutorial"
         app:layout_constraintBottom_toTopOf="@+id/btnQuiz"
-        app:layout_constraintEnd_toEndOf="@+id/heading"
-        app:layout_constraintStart_toStartOf="@+id/heading" />
+        app:layout_constraintEnd_toEndOf="@+id/btnQuiz"
+        app:layout_constraintStart_toStartOf="@+id/btnQuiz" />
 </androidx.constraintlayout.widget.ConstraintLayout>
