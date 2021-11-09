@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GitMain">
+
+    <TextView
+        android:id="@+id/tutorialHeader2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorPrimary"
+        android:gravity="center_horizontal"
+        android:paddingStart="20sp"
+        android:paddingTop="20sp"
+        android:paddingEnd="20sp"
+        android:paddingBottom="20sp"
+        android:text="@string/github_header"
+        android:textAlignment="center"
+        android:textColor="@color/dark_grey"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/ic_icons8_github"
+        app:drawableStartCompat="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,4 +5,5 @@
     <string name="quiz">Take Quiz</string>
     <string name="github">Git Repo Details</string>
     <string name="tutorial_header">Tutorial</string>
+    <string name="github_header">Github</string>
 </resources>
