@@ -6,4 +6,6 @@
     <string name="github">Git Repo Details</string>
     <string name="tutorial_header">Tutorial</string>
     <string name="github_header">Github</string>
+    <string name="open_git_repo">Open Git Repo</string>
+    <string name="git_commits">Git Commits</string>
 </resources>

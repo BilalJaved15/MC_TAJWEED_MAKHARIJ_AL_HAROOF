@@ -1,6 +1,7 @@
 package com.example.makharijAlHuroof;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -92,6 +93,9 @@ public class ClickListener implements View.OnClickListener {
         if (v.getId() == R.id.btnTutorial){
             Intent intent = new Intent(activity, TutorialMain.class);
             activity.startActivity(intent);
+        } else if(v.getId() == R.id.btnRepo){
+            Intent intent = new Intent(activity, GitMain.class);
+            activity.startActivity(intent);
         }
         else if (v.getId() == R.id.nextTutorialBtn){
             TutorialMain activity = (TutorialMain)this.activity;
@@ -119,6 +123,13 @@ public class ClickListener implements View.OnClickListener {
                 int regionIndex = findIndex(activity.regionBackwardSwitch, activity.currTutorialCount);
                 setTutorialImage(activity.currTutorialImage, imageIndex);
                 setTutorialRegion(activity.currTutorialText, regionIndex, activity.regions);
+            }
+        }
+        else if (v.getId() == R.id.btnOpenRepo){
+            Uri webpage = Uri.parse("https://github.com/BilalJaved15/MC_TAJWEED_MAKHARIJ_AL_HAROOF");
+            Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+            if (intent.resolveActivity(activity.getPackageManager()) != null) {
+                activity.startActivity(intent);
             }
         }
     }
