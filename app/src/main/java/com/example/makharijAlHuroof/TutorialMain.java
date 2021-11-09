@@ -113,4 +113,76 @@ public class TutorialMain extends AppCompatActivity {
         regionForwardSwitch = new Integer[]{0, 3, 5, 7, 10, 11, 13};
         regionBackwardSwitch = new Integer[]{2, 4, 6, 9, 10, 12, 13};
     }
+
+    @Override
+
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString("currTutorialText", currTutorialText.getText().toString());
+        savedInstanceState.putString("currTutorialLetter", currTutorialLetter.getText().toString());
+        savedInstanceState.putString("currTutorialSound", currTutorialSound.getText().toString());
+        int currImage = 1;
+        if (currTutorialImage.getDrawable().getConstantState() == getResources().getDrawable(R.drawable.emission2).getConstantState()) {
+            currImage = 2;
+        } else if (currTutorialImage.getDrawable().getConstantState() == getResources().getDrawable(R.drawable.emission3).getConstantState()) {
+            currImage = 3;
+        } else if (currTutorialImage.getDrawable().getConstantState() == getResources().getDrawable(R.drawable.emission4).getConstantState()) {
+            currImage = 4;
+        } else if (currTutorialImage.getDrawable().getConstantState() == getResources().getDrawable(R.drawable.emission5).getConstantState()) {
+            currImage = 5;
+        } else if (currTutorialImage.getDrawable().getConstantState() == getResources().getDrawable(R.drawable.emission6).getConstantState()) {
+            currImage = 6;
+        } else if (currTutorialImage.getDrawable().getConstantState() == getResources().getDrawable(R.drawable.emission7).getConstantState()) {
+            currImage = 7;
+        } else if (currTutorialImage.getDrawable().getConstantState() == getResources().getDrawable(R.drawable.emission8).getConstantState()) {
+            currImage = 8;
+        } else if (currTutorialImage.getDrawable().getConstantState() == getResources().getDrawable(R.drawable.emission9).getConstantState()) {
+            currImage = 9;
+        }
+        savedInstanceState.putInt("currImage", currImage);
+        savedInstanceState.putInt("currTutorialCount", currTutorialCount);
+        savedInstanceState.putBoolean("nextEnabled", btnNext.isEnabled());
+        savedInstanceState.putBoolean("prevEnabled", btnPrevious.isEnabled());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        currTutorialText.setText(savedInstanceState.getString("currTutorialText"));
+        currTutorialLetter.setText(savedInstanceState.getString("currTutorialLetter"));
+        currTutorialSound.setText(savedInstanceState.getString("currTutorialSound"));
+        currTutorialCount = (savedInstanceState.getInt("currTutorialCount"));
+        int currImage = savedInstanceState.getInt("currImage");
+        switch (currImage){
+            case 1:
+                currTutorialImage.setImageResource(R.drawable.emission1);
+                break;
+            case 2:
+                currTutorialImage.setImageResource(R.drawable.emission2);
+                break;
+            case 3:
+                currTutorialImage.setImageResource(R.drawable.emission3);
+                break;
+            case 4:
+                currTutorialImage.setImageResource(R.drawable.emission4);
+                break;
+            case 5:
+                currTutorialImage.setImageResource(R.drawable.emission5);
+                break;
+            case 6:
+                currTutorialImage.setImageResource(R.drawable.emission6);
+                break;
+            case 7:
+                currTutorialImage.setImageResource(R.drawable.emission7);
+                break;
+            case 8:
+                currTutorialImage.setImageResource(R.drawable.emission8);
+                break;
+            case 9:
+                currTutorialImage.setImageResource(R.drawable.emission9);
+                break;
+        }
+        btnNext.setEnabled(savedInstanceState.getBoolean("nextEnabled"));
+        btnPrevious.setEnabled(savedInstanceState.getBoolean("prevEnabled"));
+    }
 }
