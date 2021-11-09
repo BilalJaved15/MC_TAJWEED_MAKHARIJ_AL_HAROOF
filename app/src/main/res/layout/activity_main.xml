@@ -22,14 +22,14 @@
 
     <Button
         android:id="@+id/btnRepo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="200dp"
+        android:drawableEnd="@drawable/ic_icons8_github"
         android:text="@string/github"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnQuiz"
-        app:layout_constraintStart_toStartOf="@+id/btnQuiz"
-        android:drawableEnd="@drawable/ic_icons8_github"/>
+        app:layout_constraintStart_toStartOf="@+id/btnQuiz" />
 
     <TextView
         android:id="@+id/madeBy"
@@ -46,14 +46,14 @@
 
     <Button
         android:id="@+id/btnQuiz"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="22dp"
+        android:drawableEnd="@drawable/ic_outline_school_24"
         android:text="@string/quiz"
         app:layout_constraintBottom_toTopOf="@+id/btnRepo"
         app:layout_constraintEnd_toEndOf="@+id/btnTutorial"
-        app:layout_constraintStart_toStartOf="@+id/btnTutorial"
-        android:drawableEnd="@drawable/ic_outline_school_24"/>
+        app:layout_constraintStart_toStartOf="@+id/btnTutorial" />
 
     <Button
         android:id="@+id/btnTutorial"

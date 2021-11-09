@@ -3,11 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.2203125" />
+        <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/drawable/ic_baseline_redo_24.xml" value="0.2203125" />
+        <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/drawable/ic_baseline_undo_24.xml" value="0.2203125" />
         <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/drawable/ic_icons8_github.xml" value="0.2203125" />
+        <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
         <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/drawable/ic_outline_menu_book_24.xml" value="0.2203125" />
         <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/drawable/ic_outline_school_24.xml" value="0.1125" />
         <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/layout-land/activity_main.xml" value="0.13958333333333334" />
         <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/layout/activity_main.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/layout/activity_tutorial_main.xml" value="0.25" />
       </map>
     </option>
   </component>
