@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class TutorialMain extends AppCompatActivity {
@@ -16,6 +18,8 @@ public class TutorialMain extends AppCompatActivity {
     TextView currTutorialSound;
     Button btnNext;
     Button btnPrevious;
+    ImageView currTutorialImage;
+
     Integer currTutorialCount;
     TouchListener touchListener;
     ClickListener clickListener;
@@ -24,7 +28,10 @@ public class TutorialMain extends AppCompatActivity {
     ArrayList<String> sounds;
     ArrayList<String> regions;
 
-    int[] regionSwitch;
+    Integer[] imageForwardSwitch;
+    Integer[] imageBackwardSwitch;
+    Integer[] regionForwardSwitch;
+    Integer[] regionBackwardSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +42,7 @@ public class TutorialMain extends AppCompatActivity {
         currTutorialText = findViewById(R.id.tutorialCountText);
         currTutorialLetter = findViewById(R.id.letterText);
         currTutorialSound = findViewById(R.id.soundText);
+        currTutorialImage = findViewById(R.id.currTutorialImage);
 
         btnNext = findViewById(R.id.nextTutorialBtn);
         btnPrevious = findViewById(R.id.prevTutorialBtn);
@@ -67,7 +75,7 @@ public class TutorialMain extends AppCompatActivity {
         letters.add("ص ز س");
         letters.add("م ن");
         letters.add("ف");
-        letters.add("ف");
+        letters.add("ب");
         letters.add("م");
         letters.add("و");
         letters.add("باَ بوُ بىِ");
@@ -98,10 +106,11 @@ public class TutorialMain extends AppCompatActivity {
         regions.add("4. Tarfiyah");
         regions.add("5. Nit-eeyah");
         regions.add("6. Lisaveyah");
-        regions.add("7. Lisaveyah");
-        regions.add("8. Ghunna");
-        regions.add("9. Ghunna");
+        regions.add("7. Ghunna");
 
-        regionSwitch = new int[]{3, 5, 7, 10, 11, 12, 13, 14};
+        imageForwardSwitch = new Integer[]{0, 3, 5, 7, 10, 11, 12, 13, 14};
+        imageBackwardSwitch = new Integer[]{2, 4, 6, 9, 10, 11, 12, 13, 14};
+        regionForwardSwitch = new Integer[]{0, 3, 5, 7, 10, 11, 13};
+        regionBackwardSwitch = new Integer[]{2, 4, 6, 9, 10, 12, 13};
     }
 }
