@@ -19,8 +19,25 @@ public class ClickListener implements View.OnClickListener {
             Intent intent = new Intent(activity, TutorialMain.class);
             activity.startActivity(intent);
         }
-        if (v.getId() == R.id.tutorialHeader){
-
+        else if (v.getId() == R.id.nextTutorialBtn){
+            TutorialMain activity = (TutorialMain)this.activity;
+            if (activity.currTutorialCount < 18){
+                activity.currTutorialCount++;
+                activity.btnNext.setEnabled(activity.currTutorialCount < 18);
+                activity.btnPrevious.setEnabled(activity.currTutorialCount > 0);
+                activity.currTutorialLetter.setText(activity.letters.get(activity.currTutorialCount));
+                activity.currTutorialSound.setText(activity.sounds.get(activity.currTutorialCount));
+            }
+        }
+        else if (v.getId() == R.id.prevTutorialBtn){
+            TutorialMain activity = (TutorialMain)this.activity;
+            if (activity.currTutorialCount > 0){
+                activity.currTutorialCount--;
+                activity.btnNext.setEnabled(activity.currTutorialCount < 18);
+                activity.btnPrevious.setEnabled(activity.currTutorialCount > 0);
+                activity.currTutorialLetter.setText(activity.letters.get(activity.currTutorialCount));
+                activity.currTutorialSound.setText(activity.sounds.get(activity.currTutorialCount));
+            }
         }
     }
 }
