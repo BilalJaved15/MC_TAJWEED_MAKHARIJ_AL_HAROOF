@@ -101,4 +101,21 @@ public class QuizMain extends AppCompatActivity {
         answers = new ArrayList<>();
         setQuestion();
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putIntegerArrayList("answers", answers);
+        savedInstanceState.putIntegerArrayList("questions", QuizDataSource.parseToIntegerArray(this.quizQuestions));
+        savedInstanceState.putInt("currIndex", currIndex);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        currIndex = (savedInstanceState.getInt("currIndex"));
+        answers = savedInstanceState.getIntegerArrayList("answers");
+        quizQuestions = QuizDataSource.parseToQuizQuestionArray(savedInstanceState.getIntegerArrayList("questions"));
+        setQuestion();
+    }
 }

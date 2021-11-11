@@ -55,7 +55,6 @@ public class TutorialMain extends AppCompatActivity {
     }
 
     @Override
-
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putInt("currTutorialCount", currTutorialCount);

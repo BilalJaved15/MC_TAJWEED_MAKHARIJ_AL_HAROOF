@@ -8,8 +8,17 @@ import java.util.Random;
 
 public class QuizQuestion {
     private Tutorial selectedQuestion;
+    private int selectedQuestionIndex;
     private int correctOption;
     private int[] optionIDs;
+
+    public int getSelectedQuestionIndex() {
+        return selectedQuestionIndex;
+    }
+
+    public void setSelectedQuestionIndex(int selectedQuestionIndex) {
+        this.selectedQuestionIndex = selectedQuestionIndex;
+    }
 
     public Tutorial getSelectedQuestion() {
         return selectedQuestion;
@@ -35,6 +44,10 @@ public class QuizQuestion {
         this.optionIDs = optionIDs;
     }
 
+    public void setOptionIDs(int index, int val){
+        this.optionIDs[index] = val;
+    }
+
     private boolean isSelected(int id){
         for (int optionID : optionIDs) {
             if (optionID == id)
@@ -57,6 +70,7 @@ public class QuizQuestion {
     }
 
     public QuizQuestion(int id){
+        this.selectedQuestionIndex = id;
         this.selectedQuestion = TutorialDataSource.getTutorials().get(id);
         switch (this.selectedQuestion.getImageID()){
             case R.drawable.emission1:
