@@ -3,12 +3,9 @@ package com.example.makharijAlHuroof;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.ArrayList;
 
 public class ClickListener implements View.OnClickListener {
 
@@ -52,6 +49,31 @@ public class ClickListener implements View.OnClickListener {
                 activity.currTutorialSound.setText(activity.getString(activity.tutorials.get(activity.currTutorialCount).getSoundID()));
                 activity.currTutorialText.setText(activity.getString(activity.tutorials.get(activity.currTutorialCount).getRegionID()));
                 activity.currTutorialImage.setImageResource((activity.tutorials.get(activity.currTutorialCount).getImageID()));
+            }
+        }
+        else if(v.getId() == R.id.nextQuizBtn){
+            QuizMain activity = (QuizMain)this.activity;
+            if (activity.radioGroup.getCheckedRadioButtonId() != -1){
+                switch (activity.radioGroup.getCheckedRadioButtonId()){
+                    case R.id.option1:
+                        activity.answers.add(0);
+                        break;
+                    case R.id.option2:
+                        activity.answers.add(1);
+                        break;
+                    case R.id.option3:
+                        activity.answers.add(2);
+                        break;
+                    default:
+                        activity.answers.add(3);
+                        break;
+                }
+                if (activity.currIndex < 9){
+                    activity.currIndex++;
+                    activity.setQuestion();
+                }
+            } else {
+                Toast.makeText(activity, "Please select an option", Toast.LENGTH_LONG).show();
             }
         }
         else if (v.getId() == R.id.btnOpenRepo){

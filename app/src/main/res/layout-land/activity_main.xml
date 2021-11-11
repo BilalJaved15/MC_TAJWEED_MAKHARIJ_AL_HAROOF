@@ -45,7 +45,7 @@
 
     <Button
         android:id="@+id/btnQuiz"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="18dp"
         android:drawableEnd="@drawable/ic_outline_school_24"
@@ -56,7 +56,7 @@
 
     <Button
         android:id="@+id/btnTutorial"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="17dp"
         android:drawableEnd="@drawable/ic_outline_menu_book_24"

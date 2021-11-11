@@ -54,5 +54,10 @@
     <string name="regions_5">5. Nit-eeyah</string>
     <string name="regions_6">6. Lisaveyah</string>
     <string name="regions_7">7. Ghunna</string>
-    <string name="sectionHeader">Section 1 - Identify Letter</string>
+    <string name="sectionHeader1">Section 1 - Identify Letter</string>
+    <string name="sectionHeader2">Section 2 - Identify Region</string>
+    <string name="sectionHeader3">Section 3 - Identify Sound</string>
+    <string name="section1">Which of following letter(s) is/are pronounced from the marked region?</string>
+    <string name="section2">What is the name of the marked region?</string>
+    <string name="section3">What is the sound of the letter </string>
 </resources>
