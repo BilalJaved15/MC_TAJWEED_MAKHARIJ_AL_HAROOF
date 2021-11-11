@@ -13,14 +13,19 @@
         <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/drawable/ic_outline_school_24.xml" value="0.1125" />
         <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/layout-land/activity_git_main.xml" value="0.13958333333333334" />
         <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/layout-land/activity_main.xml" value="0.13958333333333334" />
-        <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/layout-land/activity_quiz_main.xml" value="0.1728395061728395" />
+        <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/layout-land/activity_quiz_main.xml" value="0.2" />
         <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/layout-land/activity_tutorial_main.xml" value="0.13958333333333334" />
         <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/layout/activity_git_main.xml" value="0.1213768115942029" />
         <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/layout/activity_main.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/layout/activity_quiz_main.xml" value="0.18" />
+        <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/layout/activity_quiz_secondary.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/layout/activity_quiz_tertiary.xml" value="0.22" />
         <entry key="..\:/Users/bilal/AndroidStudioProjects/MakharijAlHuroof/app/src/main/res/layout/activity_tutorial_main.xml" value="0.25" />
       </map>
     </option>
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_quiz_tertiary.xml" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

@@ -7,6 +7,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.makharijAlHuroof.data.QuizDataSource;
+
 public class ClickListener implements View.OnClickListener {
 
     AppCompatActivity activity;
@@ -71,6 +73,11 @@ public class ClickListener implements View.OnClickListener {
                 if (activity.currIndex < 9){
                     activity.currIndex++;
                     activity.setQuestion();
+                } else {
+                    Intent intent = new Intent(activity, QuizSecondary.class);
+                    intent.putIntegerArrayListExtra("questions", QuizDataSource.parseToIntegerArray(activity.quizQuestions));
+                    intent.putIntegerArrayListExtra("answers", activity.answers);
+                    activity.startActivity(intent);
                 }
             } else {
                 Toast.makeText(activity, "Please select an option", Toast.LENGTH_LONG).show();

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.مخارجالحروف">
         <activity
+            android:name=".QuizSecondary"
+            android:exported="false" />
+        <activity
             android:name=".QuizMain"
             android:exported="false" />
         <activity
